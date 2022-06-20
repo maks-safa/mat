@@ -1,0 +1,57 @@
+﻿<Page x:Class="Material.MyPage.AddRedacMaterialPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Material.MyPage"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AddRedacMaterialPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <ScrollViewer Grid.Row="0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Title" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource TextBlock}" Grid.Row="0" Grid.Column="0"/>
+                <TextBlock Text="CountInPack" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource TextBlock}" Grid.Row="1" Grid.Column="0"/>
+                <TextBlock Text="Unit" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource TextBlock}" Grid.Row="2" Grid.Column="0"/>
+                <TextBlock Text="CountInStock" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource TextBlock}" Grid.Row="3" Grid.Column="0"/>
+                <TextBlock Text="MinCount" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource TextBlock}" Grid.Row="4" Grid.Column="0"/>
+                <TextBlock Text="Description" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource TextBlock}" Grid.Row="5" Grid.Column="0"/>
+                <TextBlock Text="Cost" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource TextBlock}" Grid.Row="6" Grid.Column="0"/>
+                <TextBlock Text="Image" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource TextBlock}" Grid.Row="7" Grid.Column="0"/>
+                <TextBlock Text="MatType" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource TextBlock}" Grid.Row="8" Grid.Column="0"/>
+
+                <TextBox Text="{Binding Title}" Width="200" Height="40" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left"/>
+                <TextBox Text="{Binding CountInPack}" Width="200" Height="40" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left"/>
+                <ComboBox x:Name="CBUnit" DisplayMemberPath="Title" Width="200" Height="40" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left"/>
+                <TextBox Text="{Binding CountInStock}" Width="200" Height="40" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left"/>
+                <TextBox Text="{Binding MinCount}" Width="200" Height="40" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Left"/>
+                <TextBox Text="{Binding Description}" Width="200" Height="40" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Left"/>
+                <TextBox Text="{Binding Cost}" Width="200" Height="40" Grid.Row="6" Grid.Column="1" HorizontalAlignment="Left"/>
+
+                <ComboBox x:Name="CBType" DisplayMemberPath="Title" Width="200" Height="40" Grid.Row="8" Grid.Column="1" HorizontalAlignment="Left"/>
+
+                <Button x:Name="BTSave" Content="Save" Width="200" Height="50" Click="BTSave_Click" Grid.Row="9" Grid.ColumnSpan="2"/>
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+</Page>
